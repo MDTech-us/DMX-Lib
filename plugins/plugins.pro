@@ -5,7 +5,11 @@ TEMPLATE = subdirs
  SUBDIRS              += dmxusb
  SUBDIRS              += peperoni
  SUBDIRS              += udmx
- SUBDIRS              += midi
+
+# MIDI needs to much QLC stuff, so may as well just cut it out for now.
+# TODO: It would be nice to actually fix this...
+# SUBDIRS              += midi
+
  unix {
    system(pkg-config --exists libola) {
      system(pkg-config --exists libolaserver) {
@@ -16,7 +20,11 @@ TEMPLATE = subdirs
  !macx:!win32:SUBDIRS += dmx4linux
  SUBDIRS              += velleman
  SUBDIRS              += enttecwing
- SUBDIRS              += hid
+
+# There is a problem with this plugin during runtime.
+# TODO: symbol lookup error: /usr/lib/DMXLib-Plugins/libhidplugin.so: undefined symbol: udev_new
+# SUBDIRS              += hid
+
  !macx:!win32:SUBDIRS += spi
 
  greaterThan(QT_MAJOR_VERSION, 4) {

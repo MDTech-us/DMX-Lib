@@ -1,11 +1,3 @@
-#############################################################################
-# Application name & version
-#############################################################################
-
-APPNAME    = Q Light Controller Plus
-FXEDNAME   = Fixture Definition Editor
-APPVERSION = 4.11.0 GIT
-
 # Disable these if you don't want to see GIT short hash in the About Box
 #unix:REVISION = $$system(git log --pretty=format:'%h' -n 1)
 #unix:APPVERSION = $$APPVERSION-r$$REVISION
@@ -97,6 +89,13 @@ macx:LIBSDIR       = Frameworks
 android:LIBSDIR    = /libs/armeabi-v7a
 ios:LIBSDIR        = lib
 
+# Headers
+win32:INCLUDESDIR       =
+unix:!macx:INCLUDESDIR  = include
+macx:INCLUDESDIR        = Frameworks
+android:INCLUDESDIR     = /include/armeabi-v7a
+ios:INCLUDESDIR         = include
+
 # Data
 win32:DATADIR      =
 unix:!macx:DATADIR = share/qlcplus
@@ -183,7 +182,7 @@ ios:USERFIXTUREDIR        = $$USERDATADIR/Fixtures
 
 # Plugins
 win32:PLUGINDIR      = Plugins
-unix:!macx:PLUGINDIR = $$LIBSDIR/qt4/plugins/qlcplus
+unix:!macx:PLUGINDIR = $$LIBSDIR/DMXLib-Plugins
 macx:PLUGINDIR       = PlugIns
 android:PLUGINDIR    = Plugins
 ios:PLUGINDIR        = Plugins
