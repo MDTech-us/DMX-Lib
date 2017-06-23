@@ -30,3 +30,8 @@ SOURCES += dmx4linux.cpp
 metainfo.path   = $$INSTALLROOT/share/appdata/ 
 metainfo.files += qlcplus-dmx4linux.metainfo.xml
 INSTALLS       += metainfo
+
+
+header_files.path = $$INSTALLROOT/$$INCLUDESDIR/DMXLib-Plugins
+header_files.files = $$HEADERS
+INSTALLS    += header_files

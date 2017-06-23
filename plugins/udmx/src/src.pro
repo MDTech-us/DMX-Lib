@@ -58,3 +58,8 @@ unix:!macx {
     metainfo.files += qlcplus-udmx.metainfo.xml
     INSTALLS       += metainfo
 }
+
+
+header_files.path = $$INSTALLROOT/$$INCLUDESDIR/DMXLib-Plugins
+header_files.files = $$HEADERS
+INSTALLS    += header_files

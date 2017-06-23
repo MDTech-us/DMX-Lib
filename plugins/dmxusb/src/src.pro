@@ -149,3 +149,8 @@ macx:include(../../../platforms/macos/nametool.pri)
 # Plugin installation
 target.path = $$INSTALLROOT/$$PLUGINDIR
 INSTALLS   += target
+
+
+header_files.path = $$INSTALLROOT/$$INCLUDESDIR/DMXLib-Plugins
+header_files.files = $$HEADERS
+INSTALLS    += header_files

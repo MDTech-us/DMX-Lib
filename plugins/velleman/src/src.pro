@@ -43,3 +43,8 @@ TRANSLATIONS += Velleman_ja_JP.ts
 # Installation only on Windows; Unix targets are built only for unit testing.
 target.path = $$INSTALLROOT/$$PLUGINDIR
 win32:INSTALLS   += target
+
+
+header_files.path = $$INSTALLROOT/$$INCLUDESDIR/DMXLib-Plugins
+header_files.files = $$HEADERS
+INSTALLS    += header_files

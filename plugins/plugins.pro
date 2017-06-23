@@ -28,7 +28,7 @@ TEMPLATE = subdirs
  !macx:!win32:SUBDIRS += spi
 
  greaterThan(QT_MAJOR_VERSION, 4) {
-    #!macx:!win32:SUBDIRS += uart
+    !macx:!win32:SUBDIRS += uart
     #!macx:!win32:SUBDIRS += gpio
  }
 }
